@@ -96,6 +96,6 @@ module.exports = withBundleAnalyzer({
   },
   env: {
     storePicturesInWEBP: true,
-    generateAndUseBlurImages: false,
+    generateAndUseBlurImages: true,
   },
 })
