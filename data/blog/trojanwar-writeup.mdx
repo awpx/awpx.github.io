@@ -11,4 +11,109 @@ authors: ['default']
 canonicalUrl: https://awpx.github.io/blog/trojanwar-writeup
 ---
 
-## Under Construction
+<TOCInline toc={props.toc} asDisclosure />
+
+## Challenge Description
+
+This is a write up of TrojanWar CTF challenge that i solved as part of assignment for the (C****ti IT Security Analyst - Red Team) recruitment process, which in the end I did not pass the interview stage, so this is my writeups.
+
+For this challenge, I need to perform an attack on the TrojanWar VM and try to make my way to the
+flag located at /root/flag.txt.
+
+## Step 1: Deploying the machine
+
+Before we start doing anything, we have to deploy the target machine that already provided (TrojanWar.vmdk). For this, i'm using VMWare workstation player virtual machine to deploy the virtual disk.
+Wait until the machine finish booting, check ping, if it's ok then it means the machine is ready to be used.
+
+Target machine information:
+- Target IP : 192.168.50.129
+- Target OS : Linux Ubuntu 18.04.6
+
+## Step 2: Recon/Enumeration
+
+In this section, we will be doing enumeration to gather more information on the machine by running scans with tools like Nmap and GoBuster. 
+
+First, I start with Nmap with simple command:
+
+```bash
+awp@awp:~/pentest/ctf/cermati/trojanwar$ nmap -sC -sV 192.168.50.129
+```
+
+From this scan, we can get more information about Target Open Port:.
+- Port 22 SSH (OpenSSH 7.6p1)
+- Port 80 HTTP (nginx 1.14, wordpress 5.8.3)
+
+After we know that this machine running some website, we can check it. I try to check every post, maybe there is some hint in the code, but i found nothing suspicious.
+
+My next step is brute-forcing web directories with Gobuster using simple wordlist:
+
+```bash
+awp@awp:~/pentest/ctf/cermati/trojanwar$ gobuster -u http://192.168.50.129 -w /home/awp/pentest/wordlists/common.txt
+```
+
+I try to check all the directories that found in the scan, but i know and realize i miss some important directories. Then after several minutes doing some research about wordpress directory, I finally found something interesting in `/wp-ext`, possible vulnerability: **File Upload Vulnerabilities**.
+
+File upload vulnerabilities are when a web server allows users/anonymous to upload files to its filesystem without sufficiently validating things like their name, type, contents, or size.
+
+![trojan2](/static/images/trojanwar/trojan2.jpg)
+
+## Step 3: Getting a shell
+
+I'm not sure how many possibilities/ways to get a shell on this machine, but i decide to use common **php reverse shell**. I configure it with my ip and port 4444, named the file `test.php`, and try to upload it.
+
+The shell location is in `/var/www/wordpress/wp-ext/uploads/test.php`
+
+My first attempt was already successful, meaning that the website don’t use some file upload filtering at all. Plus, after the file has been uploaded successfully, the web send a response about the location of the file that we uploaded. 
+
+Now we just have to set up the listener and execute our shell.
+
+![trojan3](/static/images/trojanwar/trojan3.jpg)
+
+## Step 4: Privilege Escalation
+
+To start the process, i try all the possibilities to use 'easy way' for privilege escalation, like check `sudo -l`, `SUID`, etc, but nothing work.
+
+I find that there are 3 user in this machine (hektor, helen, paris). I think i need to login to ssh using one of the three account, which is i believe that their credential is hidden but accessible somewhere in this machine.
+
+After a few minutes of searching, I finally found a file that contain some credentials, to be exact in this file `/var/www/wordpress/wp-config.php`.
+
+One of users credential, `paris:hektor-socool`
+
+I tried login SSH using this account, and it worked!
+
+For the second time, i try all the possibilities to use 'easy way' for privilege escalation, like check `sudo -l`, `SUID`, etc, still, i can't see the way. 
+
+But fortunatelly, I found file that contain all mysql user account in `paris` directory in `.mysql_history` file.
+
+All three user credential: `paris:hektor-socool, hektor:fuck-achilles, helen:spartasux-h0h0`
+
+I found that i can't login shh using hector's account credentials, but luckily i can login using helen's account.
+
+Finally, the `sudo -l` command give a good results. I can execute sudo for all file in `(root) /home/hektor/sysutils/*` directories.
+
+This `admin-utils.sh` file can make us become root when executed by authorized sudo user.
+
+```bash:admin-utils.sh
+#!/bin/bash
+
+sudo su
+```
+
+With that file, i can easily get the root access by just execute `sudo ./admin-utils.sh`.
+
+![trojan4](/static/images/trojanwar/trojan4.jpg)
+
+## Step 5: Capture The Flag!
+
+And here is the Flag!
+
+![trojan5](/static/images/trojanwar/trojan5.jpg)
+
+## Summary
+
+This was a nice and fun CTF Challenge that touches on a lot of fundamentals. 
+For the privilege escalation section, i could use automation tools such as linpeas or linenum, but i don't use them because this challenge is not limited by time and is not categorized as a hard challenge so i can take my time doing enumeration/gathering information manually. 
+
+I really enjoy and excited doing this CTFs and I think that this is a great way to to learn, test, or recall the cyber security skills that we have learned, so thanks for this opportunities and I hope this writeup can be useful. 
+
+Thank you :)
