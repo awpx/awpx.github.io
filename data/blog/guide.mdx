@@ -418,7 +418,6 @@ To change the default Inter font:
 2. Update the import at `pages/_app.js`- `import '@fontsource/<font-name>.css'`
 3. Update the `fontfamily` property in the tailwind css config file
 
-
 ## Images
 
 The tailwind starter blog has out of the box support for [Next.js's built-in image component](https://nextjs.org/docs/api-reference/next/image) and automatically swaps out default image tags in markdown or mdx documents to use the Image component provided.
@@ -467,7 +466,7 @@ _Note_: If you try to save the image, it is in webp format, if your browser supp
 
 ![oce](/static/images/oce.webp)
 
-720 x ... image ocea 
+720 x ... image ocea
 
 ![ocea](/static/images/ocea.webp)
 
@@ -497,7 +496,6 @@ _Note_: If you try to save the image, it is in webp format, if your browser supp
 - Images from external links are not passed through `next/image`
 - All images have to be stored in the `public` folder e.g `/static/images/ocean.jpeg`
 
-
 ## Gallery Example (O Canada)
 
 The scenic lands of Canada featuring maple leaves, snow-capped mountains, turquoise lakes and Toronto. Take in the sights in this photo gallery exhibition and see how easy it is to replicate with some MDX magic and tailwind classes.
@@ -510,17 +508,17 @@ Since we are using mdx, we can create a simple responsive flexbox grid to displa
 
 ### Gallery
 
-<div className="flex flex-wrap -mx-2 overflow-hidden xl:-mx-2">
-  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+<div className="-mx-2 flex flex-wrap overflow-hidden xl:-mx-2">
+  <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
     ![Maple](/static/images/canada/maple.jpg)
   </div>
-  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+  <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
     ![Lake](/static/images/canada/lake.jpg)
   </div>
-  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+  <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
     ![Mountains](/static/images/canada/mount.webp)
   </div>
-  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+  <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
     ![Toronto](/static/images/canada/toronto.jpg)
   </div>
 </div>
@@ -528,17 +526,17 @@ Since we are using mdx, we can create a simple responsive flexbox grid to displa
 ### Implementation
 
 ```js
-<div className="flex flex-wrap -mx-2 overflow-hidden xl:-mx-2">
-  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+<div className="-mx-2 flex flex-wrap overflow-hidden xl:-mx-2">
+  <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
     ![Maple](/static/images/canada/maple.jpg)
   </div>
-  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+  <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
     ![Lake](/static/images/canada/lake.jpg)
   </div>
-  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+  <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
     ![Mountains](/static/images/canada/mount.webp)
   </div>
-  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+  <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
     ![Toronto](/static/images/canada/toronto.jpg)
   </div>
 </div>
@@ -572,7 +570,6 @@ With MDX v2, one can interleave markdown in jsx as shown in the example code.
   on
   [Unsplash](https://unsplash.com/s/photos/canada?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
 </div>
-
 
 ## Blog Features
 
@@ -706,7 +703,6 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 `next.config.js` - configuration related to Next.js. You need to adapt the Content Security Policy if you want to load scripts, images etc. from other domains.
 
-
 ### Post Frontmatter
 
 Frontmatter follows [Hugo's standards](https://gohugo.io/content-management/front-matter/).
@@ -759,7 +755,6 @@ As the template uses `next/image` for image optimization, additional configurati
 
 The API routes used in the newsletter component cannot be used in a static site export. You will need to use a form API endpoint provider and substitute the route in the newsletter component accordingly. Other hosting platforms such as Netlify also offer alternative solutions - please refer to their docs for more information.
 
-
 ## Upgrade guide
 
 There are significant portions of the code that has been changed from v0 to v1 including support for layouts and a new mdx engine.
@@ -792,7 +787,6 @@ async redirects() {
   ]
 }
 ```
-
 
 ## Mathematical
 
@@ -898,7 +892,8 @@ $$y_i = \mathbf{x}'_i \beta + u_i$$
 Find $\beta$ that minimises the sum of squared errors:
 
 $$
-Q = \sum_{i=1}^{n}{u_i^2} = \sum_{i=1}^{n}{(y_i - \mathbf{x}'_i\beta)^2} = (Y-X\beta)'(Y-X\beta)
+Q = \sum_{i=1}^{n}{u_i^2} = \sum_{i=1}^{n}{(y_i - \mathbf{x}'_i\beta)^2}
+= (Y-X\beta)'(Y-X\beta)
 $$
 
 **Solution**:  
@@ -927,7 +922,6 @@ $$
                    & = (\sum^{n} \mathbf{x}_i \mathbf{x}'_i)^{-1} \sum^{n} \mathbf{x}_i y_i
 \end{aligned}
 $$
-
 
 ## Markdown Guide
 
@@ -1103,6 +1097,5 @@ You can create tables by assembling a list of words and dividing them with hyphe
 | --------------------------- | ---------------------------- |
 | Content from cell 1         | Content from cell 2          |
 | Content in the first column | Content in the second column |
-
 
 - Any word wrapped with two tildes (like `~~this~~`) will appear ~~crossed out~~.

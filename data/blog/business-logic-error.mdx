@@ -10,47 +10,155 @@ authors: ['default']
 canonicalUrl: https://awpx.github.io/blog/business-logic-error
 ---
 
-## What is it? (simple)
+## Business Logic Error
+
+<TOCInline toc={props.toc} asDisclosure />
+
+### What is it? (simple)
 
 - It's when the normal functionality of a website or app allows an attacker to compromise/manipulate it.
 - This is often as simple as "getting things for free" but can also be as complex as bypassing security features like authorisation.
 - Many websites or apps have bugs (the traditional kind) like this or other, so we need to focus on what the security risk is.
 
-## What make them great first bug?
+### What make them great first bug?
+
 - No need for deep technical knowledge
 - Can looking at web/app that you are already familiar with
 - Easy to find, but require some patient/presistence
 - Can be found by using one simple tool (burp)
 
-## How to find them?
+### How to find them?
+
 - Figure out what the web/app (target) does, what is "normal".
 - Make sure you know what all the buttons do.
 - Try to play around and do things you shouldn't.
 - You find it? Does this give you a security impact?
-- Yes? Write up the report and make sure you've got a payment method setup for your bounty! 
+- Yes? Write up the report and make sure you've got a payment method setup for your bounty!
 
-## Case study example:
+### Case study example:
 
-- Response program can create bounty table - $500: https://hackerone.com/reports/460920 
-- OLO Total price manipulation using negative quantities - $3,500: https://hackerone.com/reports/364843 
-- Able to manipulate order amount by removing cancellation amount and cause financial impact: $750 - https://hackerone.com/reports/614523 
-- Gaining unlimited bonus points on websites with WooCommerce Points and Rewards - $150: https://hackerone.com/reports/592803 
-- Lack of proper paymentProfileUUID validation allows any number of free rides without any outstanding balance - $1,500: https://hackerone.com/reports/574638 
-- Lack of payment type validation in dial.uber.com allows for free rides - $5,000: https://hackerone.com/reports/162199 
+- Response program can create bounty table - $500: https://hackerone.com/reports/460920
+- OLO Total price manipulation using negative quantities - $3,500: https://hackerone.com/reports/364843
+- Able to manipulate order amount by removing cancellation amount and cause financial impact: $750 - https://hackerone.com/reports/614523
+- Gaining unlimited bonus points on websites with WooCommerce Points and Rewards - $150: https://hackerone.com/reports/592803
+- Lack of proper paymentProfileUUID validation allows any number of free rides without any outstanding balance - $1,500: https://hackerone.com/reports/574638
+- Lack of payment type validation in dial.uber.com allows for free rides - $5,000: https://hackerone.com/reports/162199
 - Harvesting all private invites using leave program fast-tracked invitation and security@ email forwarding feature - $2,500: https://hackerone.com/reports/334205 and https://medium.com/pinoywhitehat/harvesting-all-private-invites-using-leave-program-fast-tracked-invitation-and-security-email-a01c8b3ce76f
 - Claiming package names in GitLab's automatic package referencer. - $1,000: https://hackerone.com/reports/462503
 
-## Tips:
+### Tips:
 
 - Payment Gateways or points system are great place to look
 - Look for ways to skip over steps
 - Parameters are always worth fiddling with
-- These bugs can  be complex but also quite simple
+- These bugs can be complex but also quite simple
 - Finding impact can be hard
-    - Financial impact is easy to show
-    - Other impact do exist.
+  - Financial impact is easy to show
+  - Other impact do exist.
 - APIs can be gold mines
-    - It's very important to know how a website or app works first.
+  - It's very important to know how a website or app works first.
 
+### References
 
-DISCLAIMER: This note is just a summary from this video https://www.youtube.com/watch?v=RobCqW2KwGs, check out for more detailed explanation and practical tutorial.  
+DISCLAIMER: This note is just a summary from this video https://www.youtube.com/watch?v=RobCqW2KwGs, check out for more detailed explanation and practical tutorial.
+
+## About Business Logic Error From Other Source
+
+### Definition
+
+Business logic vulnerabilities are flaws in the design and implementation of an application that allow an attacker to elicit unintended behavior. This potentially enables attackers to manipulate legitimate functionality to achieve a malicious goal. These flaws are generally the result of failing to anticipate unusual application states that may occur and, consequently, failing to handle them safely.
+
+```
+Note
+In this context, the term "business logic" simply refers to the set of rules that define how the application operates. As these rules aren't always directly related to a business, the associated vulnerabilities are also known as "application logic vulnerabilities" or simply "logic flaws".
+```
+
+Logic flaws are often invisible to people who aren't explicitly looking for them as they typically won't be exposed by normal use of the application. However, an attacker may be able to exploit behavioral quirks by interacting with the application in ways that developers never intended.
+
+One of the main purposes of business logic is to enforce the rules and constraints that were defined when designing the application or functionality. Broadly speaking, the business rules dictate how the application should react when a given scenario occurs. This includes preventing users from doing things that will have a negative impact on the business or that simply don't make sense.
+
+Flaws in the logic can allow attackers to circumvent these rules. For example, they might be able to complete a transaction without going through the intended purchase workflow. In other cases, broken or non-existent validation of user-supplied data might allow users to make arbitrary changes to transaction-critical values or submit nonsensical input. By passing unexpected values into server-side logic, an attacker can potentially induce the application to do something that it isn't supposed to.
+
+Logic-based vulnerabilities can be extremely diverse and are often unique to the application and its specific functionality. Identifying them often requires a certain amount of human knowledge, such as an understanding of the business domain or what goals an attacker might have in a given context. This makes them difficult to detect using automated vulnerability scanners. As a result, logic flaws are a great target for bug bounty hunters and manual testers in general.
+
+Business Logic Errors are ways of using the legitimate processing flow of an application in a way that results in a negative consequence to the organization. There are various cases where these errors can result in enormous business losses. A few notable test cases are mentioned below:
+
+1. **Business logic flaw in blogging**: A blogging portal was designed to ensure that initial posts do not contain profanity based on a list that the post is compared against. If a word on the profanity list is found, the blog post submission is not accepted. But, once a submission has been accepted, the user can edit the article and update its contents. When saving this edited article, the blog post is not checked against the profanity list. As a result, the original business rule has been bypassed and posts can contain profanity
+
+2. **Exploiting an e-commerce store**: A broken session management can be extremely harmful, in a particular scenario when an attacker is checking out of cart, he can inject lower costs then the actual calculated by the application logic. In such scenarios attacker causes a lot of damage to the application.
+
+3. **The loyalty program hack**: In another typical scenario, if a loyalty program is in existence with purchases, as soon as the attacker makes a purchase the points get added to their account but if he cancels the purchase the points does not get deducted.
+
+Most security problems are weaknesses in an application that result from a broken or missing security control (authentication, access control, input validation, etc…). By contrast, business logic vulnerabilities are ways of using the legitimate processing flow of an application in a way that results in a negative consequence to the organization. For example:
+
+- Purchase orders are not processed before midnight
+- Written authorization is not on file before web access is granted
+- Transactions in excess of $2000 are not reviewed by a person
+
+Many articles that describe business logic problems simply take an existing and well understood web application security problem and discuss the business consequence of the vulnerability. True business logic problems are actually different from the typical security vulnerability. Here are some examples of problems that are not business logic vulnerabilities:
+
+- Performing a denial of service by locking an auction user’s account
+- Posting unvalidated input publically
+- Cracking MD5 hashes
+- Brute forcing a password recovery scheme
+
+Too often, the business logic category is used for vulnerabilities that can’t be scanned for automatically. This makes it very difficult to apply any kind of categorization scheme. Business logic problems are different from authentication problems and every other category. There are many signficant business logic vulnerabilities, but they are far less common than the type of items in the OWASP Top Ten for example.
+
+A nice rule-of-thumb to use is that if you need to truly understand the business to understand the vulnerability, you might have a business-logic problem on your hands. If you don’t understand the business, you can’t see business logic flaws.
+
+### How do business logic vulnerabilities arise?
+
+Business logic vulnerabilities often arise because the design and development teams make flawed assumptions about how users will interact with the application. These bad assumptions can lead to inadequate validation of user input. For example, if the developers assume that users will pass data exclusively via a web browser, the application may rely entirely on weak client-side controls to validate input. These are easily bypassed by an attacker using an intercepting proxy.
+
+Ultimately, this means that when an attacker deviates from the expected user behavior, the application fails to take appropriate steps to prevent this and, subsequently, fails to handle the situation safely.
+
+Logic flaws are particularly common in overly complicated systems that even the development team themselves do not fully understand. To avoid logic flaws, developers need to understand the application as a whole. This includes being aware of how different functions can be combined in unexpected ways. Developers working on large code bases may not have an intimate understanding of how all areas of the application work. Someone working on one component could make flawed assumptions about how another component works and, as a result, inadvertently introduce serious logic flaws. If the developers do not explicitly document any assumptions that are being made, it is easy for these kinds of vulnerabilities to creep into an application.
+
+### Consequences & Impact
+
+The impact of business logic vulnerabilities can, at times, be fairly trivial. It is a broad category and the impact is highly variable. However, any unintended behavior can potentially lead to high-severity attacks if an attacker is able to manipulate the application in the right way. For this reason, quirky logic should ideally be fixed even if you can't work out how to exploit it yourself. There is always a risk that someone else will be able to.
+
+Fundamentally, the impact of any logic flaw depends on what functionality it is related to. If the flaw is in the authentication mechanism, for example, this could have a serious impact on your overall security. Attackers could potentially exploit this for privilege escalation, or to bypass authentication entirely, gaining access to sensitive data and functionality. This also exposes an increased attack surface for other exploits.
+
+Flawed logic in financial transactions can obviously lead to massive losses for the business through stolen funds, fraud, and so on.
+
+You should also note that even though logic flaws may not allow an attacker to benefit directly, they could still allow a malicious party to damage the business in some way.
+
+We have seen many cases where companies end up losing important customer data in cyber thefts. The consequences vary depending on the nature of the web application. Due to existence of flaws in the business logic, hackers have managed to buy products from e-commerce stores at lower prices than originally they were listed for.
+
+- User Privilege Escalation
+- Access to Unauthorized Information
+- Identity Extraction
+- Overwrite records in the Database
+- Manipulating Shopping Cart & Payment Systems
+- Getting More Discounts
+- Extending Subscription
+- Downloading Data of other Users
+- Bypass Security Restrictions
+- Circumvent Captcha Codes
+- Denial of Service
+
+### Why are Business Logic errors difficult to find?
+
+As the name suggests, Business Logic Errors are logical errors requiring sophisticated testing mechanisms to uncover these issues. They are difficult to uncover because:
+
+- Security Scanners can not identify them. Security Scanners find known security vulnerabilities and Weak Development Practices, however they may not understand the business rules while testing
+- Intrusion Detection Systems and Web Application Firewalls cannot detect Business Logic Errors. These systems are designed to identify known malicious attacks like SQLi, XSS, Bad Bots. However, business logic errors are logic leaks and legitimate looking. They may not be detected by WAFs in some cases.
+- Application Specific Knowledge is Required as what may be a security flaw in one application may not be in another. The business rules vary with the web application.
+
+### Examples of Vuln with LAB (portswigger)
+
+Examples of logic flaws include:
+
+- [Excessive trust in client-side controls LABS](https://portswigger.net/web-security/logic-flaws/examples#excessive-trust-in-client-side-controls)
+- [Failing to handle unconventional input LABS](https://portswigger.net/web-security/logic-flaws/examples#failing-to-handle-unconventional-input)
+- [Making flawed assumptions about user behavior LABS](https://portswigger.net/web-security/logic-flaws/examples#making-flawed-assumptions-about-user-behavior)
+- [Domain-specific flaws LABS](https://portswigger.net/web-security/logic-flaws/examples#domain-specific-flaws)
+- [Providing an encryption oracle LABS](https://portswigger.net/web-security/logic-flaws/examples#providing-an-encryption-oracle)
+
+### Source
+
+- https://www.getastra.com/blog/knowledge-base/business-logic-errors-need-know/#:~:text=Business%20Logic%20Errors%20are%20ways,result%20in%20enormous%20business%20losses.
+- https://portswigger.net/web-security/logic-flaws
+- https://portswigger.net/web-security/logic-flaws/examples
+- https://owasp.org/www-community/vulnerabilities/Business_logic_vulnerability
