@@ -1,0 +1,56 @@
+---
+title: '[VULN/BUG] About Business Logic Error'
+date: 2022-02-26T21:44:14Z
+lastmod: '2022-02-26'
+tags: ['vuln', 'bug']
+draft: false
+summary: 'Summary of innformation about "Business Logic Error" bugs'
+layout: PostLayout
+authors: ['default']
+canonicalUrl: https://awpx.github.io/blog/business-logic-error
+---
+
+## What is it? (simple)
+
+- It's when the normal functionality of a website or app allows an attacker to compromise/manipulate it.
+- This is often as simple as "getting things for free" but can also be as complex as bypassing security features like authorisation.
+- Many websites or apps have bugs (the traditional kind) like this or other, so we need to focus on what the security risk is.
+
+## What make them great first bug?
+- No need for deep technical knowledge
+- Can looking at web/app that you are already familiar with
+- Easy to find, but require some patient/presistence
+- Can be found by using one simple tool (burp)
+
+## How to find them?
+- Figure out what the web/app (target) does, what is "normal".
+- Make sure you know what all the buttons do.
+- Try to play around and do things you shouldn't.
+- You find it? Does this give you a security impact?
+- Yes? Write up the report and make sure you've got a payment method setup for your bounty! 
+
+## Case study example:
+
+- Response program can create bounty table - $500: https://hackerone.com/reports/460920 
+- OLO Total price manipulation using negative quantities - $3,500: https://hackerone.com/reports/364843 
+- Able to manipulate order amount by removing cancellation amount and cause financial impact: $750 - https://hackerone.com/reports/614523 
+- Gaining unlimited bonus points on websites with WooCommerce Points and Rewards - $150: https://hackerone.com/reports/592803 
+- Lack of proper paymentProfileUUID validation allows any number of free rides without any outstanding balance - $1,500: https://hackerone.com/reports/574638 
+- Lack of payment type validation in dial.uber.com allows for free rides - $5,000: https://hackerone.com/reports/162199 
+- Harvesting all private invites using leave program fast-tracked invitation and security@ email forwarding feature - $2,500: https://hackerone.com/reports/334205 and https://medium.com/pinoywhitehat/harvesting-all-private-invites-using-leave-program-fast-tracked-invitation-and-security-email-a01c8b3ce76f
+- Claiming package names in GitLab's automatic package referencer. - $1,000: https://hackerone.com/reports/462503
+
+## Tips:
+
+- Payment Gateways or points system are great place to look
+- Look for ways to skip over steps
+- Parameters are always worth fiddling with
+- These bugs can  be complex but also quite simple
+- Finding impact can be hard
+    - Financial impact is easy to show
+    - Other impact do exist.
+- APIs can be gold mines
+    - It's very important to know how a website or app works first.
+
+
+DISCLAIMER: This note is just a summary from this video https://www.youtube.com/watch?v=RobCqW2KwGs, check out for more detailed explanation and practical tutorial.  
