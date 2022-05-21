@@ -1,0 +1,77 @@
+---
+title: '[VULN/BUG] About Blind XSS & XSS Hunter'
+date: 2022-05-21T22:52:14Z
+lastmod: '2022-05-21'
+tags: ['vuln', 'bug']
+draft: false
+summary: 'My notes / documentation about "Blind XSS & XSS Hunter"'
+layout: PostLayout
+authors: ['default']
+canonicalUrl: https://awpx.github.io/blog/blind-xss-and-xss-hunter
+---
+
+## Blind XSS & XSS Hunter
+
+<TOCInline toc={props.toc} asDisclosure />
+
+### What's the difference
+
+- In regular XSS hunting we can see whether or not a payload fires
+- WIth Blind XSS we leave payloads like santa leaves presents
+- Why? we are hoping they fire on a different page
+
+### What does that mean?
+
+- When we do regular XSS Hunting we can load the page with the xss payload
+- But with blind XSS we assume the payload is on the some page we cant see
+  - Eg logging functionality, admin control panel, or even a completely different web app
+  - We dont know where the payload ends up
+
+### So?
+
+- Standard XSS
+  - Try a XSS payload
+  - Reload the page.. did it work?
+  - No? then try another payload/page
+  - yes? 'the report the bug
+
+-Blind XSS
+
+- Send a payload
+- Send it to every payload
+- Hope that it will fire in some point in the future
+- Have a nap
+- Eventually get a notification
+- report the bug
+
+### What type of XSS
+
+- Our payload gets stored on a sever via a log file or Database
+- It's a type of stored XSS
+- The main difference between blind XSS and traditional stored XSS?
+  - We don’t know where the XSS fires until it fires
+  - we don’t know the asset, the url, the api endpoint etc
+
+### Where to find Blnd XSS?
+
+- Focus on endpoint that have some likely admiin interaction
+  - 'requires approval', 'requires admin approval' are good signs
+  - Product support eg contact us forms, cha applications, support tickets
+  - Error messages, anything that migh be saved in a log
+  - Reporting functionally, where a comment or post might be revieweed by a moderator
+- Bind XSS payloads can often be sprayed to every endpoint
+  - Avoid doing this because you might forget where you left
+
+### So what do you need to do this?
+
+- XSS hunter is very popular and commnly used https://xsshunter.com/app (you can run this privately or use the public sevice)
+- Alternatives include burp collaborator
+- XSS hunter has some neat features
+  - It will email you a report
+  - Sends the cookies
+  - shows a screenshoot
+  - and more
+
+### Source
+
+-
