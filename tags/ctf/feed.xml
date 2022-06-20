@@ -7,7 +7,7 @@
       <language>en-us</language>
       <managingEditor>awpxwork@gmail.com (awpx)</managingEditor>
       <webMaster>awpxwork@gmail.com (awpx)</webMaster>
-      <lastBuildDate>Mon, 24 Jan 2022 19:32:14 GMT</lastBuildDate>
+      <lastBuildDate>Sun, 20 Feb 2022 19:32:14 GMT</lastBuildDate>
       <atom:link href="https://awpx.github.io/tags/ctf/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
@@ -15,7 +15,7 @@
     <title>[CTF Writeups] CTF &quot;Trojanwar&quot; Writeups </title>
     <link>https://awpx.github.io/blog/trojanwar-writeup</link>
     <description>This is a write up of a TrojanWar CTF challenge that i solved as part of assignment for the (C****ti IT Security Analyst - Red Team) recruitment process, which in the end I did not pass the interview stage</description>
-    <pubDate>Mon, 24 Jan 2022 19:32:14 GMT</pubDate>
+    <pubDate>Sun, 20 Feb 2022 19:32:14 GMT</pubDate>
     <author>awpxwork@gmail.com (awpx)</author>
     <category>ctf</category><category>writeup</category>
   </item>
