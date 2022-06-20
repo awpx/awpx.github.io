@@ -25,6 +25,10 @@
   </url>
 
   <url>
+    <loc>https://awpx.github.io/tags/ctf</loc>
+  </url>
+
+  <url>
     <loc>https://awpx.github.io/tags/guide</loc>
   </url>
 
@@ -42,5 +46,9 @@
 
   <url>
     <loc>https://awpx.github.io/tags/resume</loc>
+  </url>
+
+  <url>
+    <loc>https://awpx.github.io/tags/writeup</loc>
   </url>
 </urlset>
