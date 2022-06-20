@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>AWP Notes</title>
+      <link>https://awpx.github.io/blog</link>
+      <description>Read my latest personal notes, mostly write-up/walkthrough, articles, projects and others related to IT and Cybersecurity.</description>
+      <language>en-us</language>
+      <managingEditor>awpxwork@gmail.com (awpx)</managingEditor>
+      <webMaster>awpxwork@gmail.com (awpx)</webMaster>
+      <lastBuildDate>Tue, 15 Mar 2022 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://awpx.github.io/tags/portfolio/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://awpx.github.io/blog/bug-hunting-notes</guid>
+    <title>My Bug Hunting Notes</title>
+    <link>https://awpx.github.io/blog/bug-hunting-notes</link>
+    <description>Information notes that documenting about all my projects related to bug hunting.</description>
+    <pubDate>Tue, 15 Mar 2022 00:00:00 GMT</pubDate>
+    <author>awpxwork@gmail.com (awpx)</author>
+    <category>projects</category><category>portfolio</category><category>resume</category>
+  </item>
+
+    </channel>
+  </rss>

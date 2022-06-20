@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>AWP Notes</title>
+      <link>https://awpx.github.io/blog</link>
+      <description>Read my latest personal notes, mostly write-up/walkthrough, articles, projects and others related to IT and Cybersecurity.</description>
+      <language>en-us</language>
+      <managingEditor>awpxwork@gmail.com (awpx)</managingEditor>
+      <webMaster>awpxwork@gmail.com (awpx)</webMaster>
+      <lastBuildDate>Sat, 22 Jan 2022 15:32:14 GMT</lastBuildDate>
+      <atom:link href="https://awpx.github.io/tags/guide/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://awpx.github.io/blog/guide</guid>
+    <title>Guide</title>
+    <link>https://awpx.github.io/blog/guide</link>
+    <description>An overview of the blog features &amp; guide to use</description>
+    <pubDate>Sat, 22 Jan 2022 15:32:14 GMT</pubDate>
+    <author>awpxwork@gmail.com (awpx)</author>
+    <category>guide</category><category>mdx</category>
+  </item>
+
+    </channel>
+  </rss>
