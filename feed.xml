@@ -21,6 +21,16 @@
   </item>
 
   <item>
+    <guid>https://awpx.github.io/blog/business-logic-error</guid>
+    <title>[VULN/BUG] About Business Logic Error</title>
+    <link>https://awpx.github.io/blog/business-logic-error</link>
+    <description>Summary of innformation about &quot;Business Logic Error&quot; bugs</description>
+    <pubDate>Sat, 26 Feb 2022 21:44:14 GMT</pubDate>
+    <author>awpxwork@gmail.com (awpx)</author>
+    <category>vuln</category><category>bug</category>
+  </item>
+
+  <item>
     <guid>https://awpx.github.io/blog/trojanwar-writeup</guid>
     <title>[CTF Writeups] CTF &quot;Trojanwar&quot; Writeups </title>
     <link>https://awpx.github.io/blog/trojanwar-writeup</link>
