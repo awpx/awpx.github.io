@@ -2,9 +2,10 @@ const siteMetadata = {
   title: 'AWP Notes',
   author: 'awpx',
   headerTitle: 'AWP Notes',
-  description: 'Read my latest personal notes, mostly write-up/walkthrough, articles, projects and others related to IT and Cybersecurity.',
+  description:
+    'Read my latest personal notes, mostly write-up/walkthrough, articles, projects and others related to IT and Cybersecurity.',
   language: 'en-us',
-  theme: 'dark', // system, dark or light
+  theme: 'light', // system, dark or light
   siteUrl: 'https://awpx.github.io',
   siteRepo: 'https://github.com/awpx/blog',
   siteLogo: '/static/images/logo.png',

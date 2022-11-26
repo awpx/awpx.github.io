@@ -2,7 +2,7 @@
 title: '[CTF Writeups] CTF "Trojanwar" Writeups '
 date: 2022-02-20T19:32:14Z
 lastmod: '2022-01-24'
-tags: ['ctf', 'writeup']
+tags: ['ctf', 'writeups']
 draft: false
 summary: 'This is a write up of a TrojanWar CTF challenge that i solved as part of assignment for the (C****ti IT
 Security Analyst - Red Team) recruitment process, which in the end I did not pass the interview stage'
@@ -15,7 +15,7 @@ canonicalUrl: https://awpx.github.io/blog/trojanwar-writeup
 
 ## Challenge Description
 
-This is a write up of TrojanWar CTF challenge that i solved as part of assignment for the (C****ti IT Security Analyst - Red Team) recruitment process, which in the end I did not pass the interview stage, so this is my writeups.
+This is a write up of TrojanWar CTF challenge that i solved as part of assignment for the (C\*\*\*\*ti IT Security Analyst - Red Team) recruitment process, which in the end I did not pass the interview stage, so this is my writeups.
 
 For this challenge, I need to perform an attack on the TrojanWar VM and try to make my way to the
 flag located at /root/flag.txt.
@@ -26,12 +26,13 @@ Before we start doing anything, we have to deploy the target machine that alread
 Wait until the machine finish booting, check ping, if it's ok then it means the machine is ready to be used.
 
 Target machine information:
+
 - Target IP : 192.168.50.129
 - Target OS : Linux Ubuntu 18.04.6
 
 ## Step 2: Recon/Enumeration
 
-In this section, we will be doing enumeration to gather more information on the machine by running scans with tools like Nmap and GoBuster. 
+In this section, we will be doing enumeration to gather more information on the machine by running scans with tools like Nmap and GoBuster.
 
 First, I start with Nmap with simple command:
 
@@ -40,6 +41,7 @@ awp@awp:~/pentest/ctf/cermati/trojanwar$ nmap -sC -sV 192.168.50.129
 ```
 
 From this scan, we can get more information about Target Open Port:.
+
 - Port 22 SSH (OpenSSH 7.6p1)
 - Port 80 HTTP (nginx 1.14, wordpress 5.8.3)
 
@@ -63,7 +65,7 @@ I'm not sure how many possibilities/ways to get a shell on this machine, but i d
 
 The shell location is in `/var/www/wordpress/wp-ext/uploads/test.php`
 
-My first attempt was already successful, meaning that the website don’t use some file upload filtering at all. Plus, after the file has been uploaded successfully, the web send a response about the location of the file that we uploaded. 
+My first attempt was already successful, meaning that the website don’t use some file upload filtering at all. Plus, after the file has been uploaded successfully, the web send a response about the location of the file that we uploaded.
 
 Now we just have to set up the listener and execute our shell.
 
@@ -81,7 +83,7 @@ One of users credential, `paris:hektor-socool`
 
 I tried login SSH using this account, and it worked!
 
-For the second time, i try all the possibilities to use 'easy way' for privilege escalation, like check `sudo -l`, `SUID`, etc, still, i can't see the way. 
+For the second time, i try all the possibilities to use 'easy way' for privilege escalation, like check `sudo -l`, `SUID`, etc, still, i can't see the way.
 
 But fortunatelly, I found file that contain all mysql user account in `paris` directory in `.mysql_history` file.
 
@@ -111,9 +113,9 @@ And here is the Flag!
 
 ## Summary
 
-This was a nice and fun CTF Challenge that touches on a lot of fundamentals. 
-For the privilege escalation section, i could use automation tools such as linpeas or linenum, but i don't use them because this challenge is not limited by time and is not categorized as a hard challenge so i can take my time doing enumeration/gathering information manually. 
+This was a nice and fun CTF Challenge that touches on a lot of fundamentals.
+For the privilege escalation section, i could use automation tools such as linpeas or linenum, but i don't use them because this challenge is not limited by time and is not categorized as a hard challenge so i can take my time doing enumeration/gathering information manually.
 
-I really enjoy and excited doing this CTFs and I think that this is a great way to to learn, test, or recall the cyber security skills that we have learned, so thanks for this opportunities and I hope this writeup can be useful. 
+I really enjoy and excited doing this CTFs and I think that this is a great way to to learn, test, or recall the cyber security skills that we have learned, so thanks for this opportunities and I hope this writeup can be useful.
 
 Thank you :)

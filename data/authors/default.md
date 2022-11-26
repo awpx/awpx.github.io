@@ -1,7 +1,7 @@
 ---
 name: Andika Wijaya Putra
-avatar: /static/images/avatar.png
-occupation: IT Security Researcher
+avatar: /static/images/avatar1.png
+occupation: IT Developer & Security Researcher
 # company: Stanford University
 email: awpxwork@gmail.com
 twitter: https://twitter.com/awpx_
@@ -9,10 +9,78 @@ linkedin: https://www.linkedin.com/in/awpx
 github: https://github.com/awpx
 ---
 
-Hello, my name is Andika Wijaya Putra, I'm a junior IT Security Specialist (Red Team) who has a big passion in the cyber security, aiming to be IT Security Expert. 
+## Summary
 
-I'am fast learner and detail oriented person. I really enjoy my free time doing activities to challenge & upgrade my cybersecurity skills through CTF, and learning about new technologies, new bugs, and all that related to cybersecurity.
+Hello, my name is Andika Wijaya Putra, I'm an IT Developer and Security Researcher who has great passion in IT Development and Security field. I'm a fast learner, adaptable, and detail oriented person. Aims to become an IT Expert.
 
-This blog dedicated to documenting my personal records containing articles, knowledge, projects, and other records mostly related to IT and Cybersecurity.
+Actively doing Coding, Bug Hunting, and Research. Also ranked top 1% at [TryHackMe](http://tryhackme.com/p/kam6in9). Feel free to reach out to me anytime.
 
-Feel free to reach out to me anytime.
+---
+
+## Skill, Tools & Knowledge I've Used
+
+- #### As Developer/Programmer: `JavaScript, ReactJS, React Native, Redux, Node.js, ExpressJS, MongoDB, PostgreSQL, JWT, Docker, AWS, Linux, etc.`
+
+- #### As Security Researcher: `Penetration Testing, Vulnerability Assessment, OWASP, OSINT, Bug Hunting, Burp Suite, Linux, etc.`
+
+- #### Others: `: Problem solving, Adaptability, Analytical & Critical thinking, Collaboration & Teamwork, Detail Oriented, Passion.`
+
+---
+
+## My Career Timeline
+
+## `2022 - Now`
+
+#### [WORK] Bug Bounty Hunter - (Self Employed)
+
+- Actively doing bug hunting at [Bugcrowd](https://bugcrowd.com) & [HackerOne](https://www.hackerone.com)
+- Found a Bug with Medium Severity at [Sociabuzz](https://www.sociabuzz.com) [[Certificate]](/static/images/cert/sociabuzz.jpg) [[Details]](awpx.github.io/blog/sociabuzz-bug)
+
+#### [PROJECT] Web Development
+
+- Build Social Media Web App using MERN Stack (with limited features, unfinished.)- [[Details]](https://awpx.github.io/blog/socmed-mern-project)
+- Build URL Shortener Web App using MERN Stack - [[Details]](https://awpx.github.io/blog/url-shortener-project)
+
+## `Oct 2021 - Feb 2022`
+
+#### [COURSE/TRAINING] Learn Cyber Security at [TryHackMe](https://tryhackme.com)
+
+- TryHackMe: Jr Penetration Tester [[Certificate]](/static/images/cert/THM1.png)
+- TryHackMe: CompTIA Pentest+ [[Certificate]](/static/images/cert/THM2.png)
+- TryHackMe: Offensive Pentesting [[Certificate]](/static/images/cert/THM3.png)
+
+## `Nov 2020 - Feb 2021`
+
+#### [WORK] Junior Developer at [PT Intersolusi Teknologi Asia (BTS.id)](https://www.bts.id)
+
+- **Responsibilities:**
+  - Collaborate with the team to developing, maintaining and optimizing mobile/web based applications, and build new features under Agile Development.
+  - Identifying and fixing bug or vulnerability that reported or found in the app.
+  - Write clean, stable, and well-documented code
+- **Accomplishment:**
+  - Good knowledge and Experience of Agile Development Method, Backend, Frontend, & Mobile App Development.
+  - Successfully completed an "Approval App" project for a large company in under three months.
+
+#### [PROJECT] Tap Appoval (Mobile Approval App) - [[Details]](https://awpx.github.io/blog/approval-app-project)
+
+- **Project Description:** "TAP Approval" is a mobile-based application that is used by PT TAP to manage the approval or permits of a document, proposal, or others with many levels of hierarchical positions and departments.
+- **My Position:** Mobile Developer (React Native)
+
+## `Apr 2020 - Oct 2020`
+
+#### [COURSE/TRAINING] Learn IT Development at [freeCodeCamp](https://www.freecodecamp.org)
+
+- FreeCodeCamp: Responsive Web Design [[Certificate]](https://www.freecodecamp.org/certification/andikawputra/responsive-web-design)
+- FreeCodeCamp: JavaScript Algorithms & Data Structures [[Certificate]](https://www.freecodecamp.org/certification/andikawputra/javascript-algorithms-and-data-structures)
+- FreeCodeCamp: Front End Libraries [[Certificate]](https://www.freecodecamp.org/certification/andikawputra/front-end-development-libraries)
+- FreeCodeCamp: APIs and Microservices [[Certificate]](https://www.freecodecamp.org/certification/andikawputra/back-end-development-and-apis)
+
+## `Sep 2015 - Feb 2020`
+
+#### [EDUCATION] Computer Systems Major at [Universitas Komputer Indonesia](https://www.unikom.ac.id)
+
+- Graduated as a Bachelor of Computer System (S. Kom)
+- Wrote a thesis on the topic of Web Programming and Fuzzy Tsukamoto
+- Join Embedded System Research Group in the first semester
+
+---

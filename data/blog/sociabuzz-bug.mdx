@@ -1,0 +1,74 @@
+---
+title: '[Bug Hunting] I found critical bugs on sociabuzz.com'
+date: '2022-11-10'
+tags: ['projects', 'portfolio', 'writeups']
+draft: false
+layout: PostLayout
+summary: 'This note contains information regarding bug that i found on sociabuzz.'
+---
+
+![sociabuzz-banner](/static/images/sociabuzz/soc1.png)
+
+## Description
+
+Using this vulnerability the attacker could abuse the features of donation using voice note that have already set to minimum amount of nominal(eg 250k minimum donation), but attacker can bypass and use this features just using 10k donation.
+
+## How i found this bug
+
+Every night I often watch streamers on YouTube to accompany me to work at night, when I watch one of the streamers I find bugs in the donate feature which in my opinion is quite detrimental and annoying for streamers who use sociabuzz because donors can abuse it and make viewers uncomfortable by the sound of excessive and repetitive voice notes.
+
+## Vulnerability Endpoint (API - Parameter)
+
+API endpoint: `POST /[username]/donate/get-form-v2`
+
+Parameter: `amount=[donation nominal]`
+
+![sociabuzz-step3](/static/images/sociabuzz/socstep3.png)
+
+The request data/parameter 'amount' can be changed from minimum of voice note nominal(eg. 250k) to just 10k after we record the voice note and before the req data send to backend.
+
+## Impact
+
+This bug allows people to abuse the voice note donation feature by sending voice note donations over and over again because they are cheap even though they have been set to be expensive by streamers. this can disrupt the flow of both streamers and other viewers because the sound that comes out of voice notes is sometimes strange and continuous, streamers and sociabuzz parties are also disadvantaged in terms of material gain (income) because they don't get the benefits they should.
+
+## Proof of Concept
+
+Target: https://sociabuzz.com/rusmandota/tribe (one of the streamers that I often watch)
+
+1. This streamer sets a voice note donation for at least 250k.
+
+![sociabuzz-step1](/static/images/sociabuzz/socstep1.jpg)
+
+2. I tried to use a voice note features by setting it to the minimum voice note donation (250k), then recording the voice note for a limit of 10 seconds, while preparing to intercept requests using burp suite
+
+![sociabuzz-step2](/static/images/sociabuzz/socstep2.png)
+
+3. When I click 'choose a payment method', the intercept is active, and I change the nominal value of the 'amount' parameter to 10k and continue the request
+
+![sociabuzz-step3](/static/images/sociabuzz/socstep3.png)
+
+4. The amount to be paid was successfully changed to 10k from 250k
+
+![sociabuzz-step4](/static/images/sociabuzz/socstep4.png)
+
+5. Once paid, a voice note donation message appears in the stream
+
+![sociabuzz-step5](/static/images/sociabuzz/socstep5.png)
+
+## Possible Causes
+
+- Lack of validation from both the frontend and backend
+
+## Other Possibilities
+
+Another possibility is that not only the 'amount' parameter can be manipulated, maybe all request data can be manipulated including the voice note file itself, maybe you can bypass the duration limit to unlimited
+
+## Timeline
+
+- 6-Nov-2022: I found the bug
+
+- 9-Nov-2022: Report was sent
+
+- 10-Nov-2022: Sociabuzz noticed
+
+- 11-Nov-2022 : Rewarded
