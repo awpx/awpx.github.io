@@ -1,7 +1,7 @@
 const projectsData = [
   {
-    title: '[Bug Hunting] I found critical bugs on sociabuzz.com',
-    description: `This note contains information regarding bug that i found on sociabuzz.`,
+    title: '[Project/Sec] I found critical bugs on sociabuzz.com',
+    description: `This notes contains information regarding my bug hunting project and the bugs that i found on sociabuzz.`,
     imgSrc: '/static/images/sociabuzz/soc1.png',
     href: '/blog/sociabuzz-bug',
     type: 'sec',

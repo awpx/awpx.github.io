@@ -34,7 +34,7 @@ Actively doing Coding, Bug Hunting, and Research. Also ranked top 1% at [TryHack
 #### [WORK] Bug Bounty Hunter - (Self Employed)
 
 - Actively doing bug hunting at [Bugcrowd](https://bugcrowd.com) & [HackerOne](https://www.hackerone.com)
-- Found a Bug with Medium Severity at [Sociabuzz](https://www.sociabuzz.com) [[Certificate]](/static/images/cert/sociabuzz.jpg) [[Details]](awpx.github.io/blog/sociabuzz-bug)
+- Found a Bug with Medium Severity at [Sociabuzz](https://www.sociabuzz.com) [[Certificate]](/static/images/cert/sociabuzz.jpg) [[Details]](https://awpx.github.io/blog/sociabuzz-bug)
 
 #### [PROJECT] Web Development
 
