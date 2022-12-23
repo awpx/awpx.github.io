@@ -12,9 +12,9 @@
       
   <item>
     <guid>https://awpx.github.io/blog/sociabuzz-bug</guid>
-    <title>[Bug Hunting] I found critical bugs on sociabuzz.com</title>
+    <title>[Project/Sec] I found critical bugs on sociabuzz.com</title>
     <link>https://awpx.github.io/blog/sociabuzz-bug</link>
-    <description>This note contains information regarding bug that i found on sociabuzz.</description>
+    <description>This notes contains information regarding my bug hunting project and the bugs that i found on sociabuzz.</description>
     <pubDate>Thu, 10 Nov 2022 00:00:00 GMT</pubDate>
     <author>awpxwork@gmail.com (awpx)</author>
     <category>projects</category><category>portfolio</category><category>writeups</category>
