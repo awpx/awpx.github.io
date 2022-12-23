@@ -1,0 +1,44 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>AWP Notes</title>
+      <link>https://awpx.github.io/blog</link>
+      <description>Read my latest personal notes, mostly write-up/walkthrough, articles, projects and others related to IT and Cybersecurity.</description>
+      <language>en-us</language>
+      <managingEditor>awpxwork@gmail.com (awpx)</managingEditor>
+      <webMaster>awpxwork@gmail.com (awpx)</webMaster>
+      <lastBuildDate>Mon, 21 Nov 2022 21:44:14 GMT</lastBuildDate>
+      <atom:link href="https://awpx.github.io/tags/project/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://awpx.github.io/blog/socmed-mern-project</guid>
+    <title>[Project/Dev] I Build Socmed-like Apps with MERN Stack</title>
+    <link>https://awpx.github.io/blog/socmed-mern-project</link>
+    <description>Information notes that documenting about my project &quot;Socmed-like Apps&quot;</description>
+    <pubDate>Mon, 21 Nov 2022 21:44:14 GMT</pubDate>
+    <author>awpxwork@gmail.com (awpx)</author>
+    <category>project</category><category>portfolio</category>
+  </item>
+
+  <item>
+    <guid>https://awpx.github.io/blog/approval-app-project</guid>
+    <title>[Project/Dev] About My Project &quot;Approval App&quot; at bts.id</title>
+    <link>https://awpx.github.io/blog/approval-app-project</link>
+    <description>Some notes regarding my project &quot;Approval App&quot; that i have been build when i was working at bts.id</description>
+    <pubDate>Sun, 16 Oct 2022 21:44:14 GMT</pubDate>
+    <author>awpxwork@gmail.com (awpx)</author>
+    <category>project</category><category>portfolio</category>
+  </item>
+
+  <item>
+    <guid>https://awpx.github.io/blog/url-shortener-project</guid>
+    <title>[Project/Dev] I Build URL Shortener Web App</title>
+    <link>https://awpx.github.io/blog/url-shortener-project</link>
+    <description>Information notes that documenting about my project &quot;URL Shortener Web App&quot;</description>
+    <pubDate>Sun, 24 Jul 2022 21:44:14 GMT</pubDate>
+    <author>awpxwork@gmail.com (awpx)</author>
+    <category>project</category><category>portfolio</category>
+  </item>
+
+    </channel>
+  </rss>
