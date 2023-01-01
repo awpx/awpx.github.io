@@ -66,6 +66,10 @@ Actively doing Coding, Bug Hunting, and Research. Also ranked top 1% at [TryHack
 - **Project Description:** "TAP Approval" is a mobile-based application that is used by PT TAP to manage the approval or permits of a document, proposal, or others with many levels of hierarchical positions and departments.
 - **My Position:** Mobile Developer (React Native)
 
+#### [PROJECT] Web Development
+
+- Build Social E-Commerce App using MERN Stack - [[Details]](https://awpx.github.io/blog/ecommerce-mern-project)
+
 ## `Apr 2020 - Oct 2020`
 
 #### [COURSE/TRAINING] Learn IT Development at [freeCodeCamp](https://www.freecodecamp.org)

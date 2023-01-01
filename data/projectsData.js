@@ -27,6 +27,13 @@ const projectsData = [
     href: '/blog/url-shortener-project',
     type: 'dev',
   },
+  {
+    title: '[Project/Dev] I Build E-Commerce Apps with MERN Stack',
+    description: `Information notes that documenting about my project "E-Commerce Apps"`,
+    imgSrc: '/static/images/awpshop/awpshop1.png',
+    href: '/blog/ecommerce-mern-project',
+    type: 'dev',
+  },
   // {
   //   title: 'The Time Machine',
   //   description: `Imagine being able to travel back in time or to the future. Simple turn the knob
