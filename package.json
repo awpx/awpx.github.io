@@ -13,7 +13,7 @@
     "export": "next build && node ./scripts/generate-sitemap && next export && next-image-export-optimizer"
   },
   "dependencies": {
-    "@fontsource/inter": "4.5.2",
+    "@fontsource/inter": "4.5.15",
     "@mailchimp/mailchimp_marketing": "^3.0.75",
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
