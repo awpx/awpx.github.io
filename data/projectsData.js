@@ -7,6 +7,20 @@ const projectsData = [
     type: 'sec',
   },
   {
+    title: '[Project/Dev] I Build Finance Graphic Information App',
+    description: `Some notes regarding my project "Finance Graphic Information App"`,
+    imgSrc: '/static/images/financeinfo/finance1.jpg',
+    href: '/blog/finance-graph-info',
+    type: 'dev',
+  },
+  {
+    title: '[Project/Dev] I Build Admin Dashboard App',
+    description: `Some notes regarding my project "Admin Dashboard App"`,
+    imgSrc: '/static/images/admindashboard/admindash2.jpg',
+    href: '/blog/admin-dashboard-react',
+    type: 'dev',
+  },
+  {
     title: '[Project/Dev] I Build Socmed-like Apps with MERN Stack',
     description: `Information notes that documenting about my project "Socmed-like Apps"`,
     imgSrc: '/static/images/awpedia/awpedia1.png',

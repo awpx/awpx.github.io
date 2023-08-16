@@ -11,15 +11,15 @@ github: https://github.com/awpx
 
 ## Summary
 
-Hello, my name is Andika Wijaya Putra, I'm an IT Developer and Security Researcher who has great passion in IT Development and Security field. I'm a fast learner, adaptable, and detail oriented person. Aims to become an IT Expert.
+Hello, my name is Andika Wijaya Putra, I'm A passionate IT Developer and Security Researcher. Fast learners, adaptable and detail oriented person.
 
-Actively doing Coding, Bug Hunting, and Research. Also ranked top 1% at [TryHackMe](http://tryhackme.com/p/kam6in9). Feel free to reach out to me anytime.
+Actively doing Development, Bug Hunting, and Research. Feel free to reach out to me anytime.
 
 ---
 
 ## Skill, Tools & Knowledge I've Used
 
-- #### As Developer/Programmer: `JavaScript, ReactJS, React Native, Redux, Node.js, ExpressJS, MongoDB, PostgreSQL, JWT, Docker, AWS, Linux, etc.`
+- #### As Developer/Programmer: `JavaScript, ReactJS, React Native, Redux, Node.js, ExpressJS, MongoDB, PostgreSQL, JWT, RESTful API, Shopify, Figma, AWS, Linux, etc.`
 
 - #### As Security Researcher: `Penetration Testing, Vulnerability Assessment, OWASP, OSINT, Bug Hunting, Burp Suite, Linux, etc.`
 
@@ -29,17 +29,43 @@ Actively doing Coding, Bug Hunting, and Research. Also ranked top 1% at [TryHack
 
 ## My Career Timeline
 
-## `2022 - Now`
+## `Jan 2023 - Present`
 
-#### [WORK] Bug Bounty Hunter - (Self Employed)
+#### [WORK] IT Staff (Developer) at [PT Surya Multi Laksana (Logo De Corps)](https://www.logojeans.com)
+
+- **Responsibilities:**
+  - Develop and manage e-commerce websites & other internal systems.
+  - Maintenance of the Company's ERP system, both current and new systems
+  - Develop and update new features based on the results of analyzing user needs.
+- **Accomplishment:**
+  - Valuable knowledge and experience about ERP systems, e-commerce development, company business flow.
+  - Successfully completed the development of five company e-commerce websites.
+
+#### [PROJECT] Logo De Corps ERP (Internal)
+
+#### [PROJECT] LogoJeans Official Webstore - [[Details]](https://logojeans.com)
+
+#### [PROJECT] Bombboogie Official Webstore - [[Details]](https://bombboogie.com)
+
+#### [PROJECT] NinetyDegrees Official Webstore - [[Details]](https://ninetydegrees.co.id)
+
+#### [PROJECT] Bodytalk Official Webstore - [[Details]](https://bodytalk.co.id)
+
+#### [PROJECT] FOD Official Webstore - [[Details]](https://fod.co.id)
+
+- **My Position:** Developer
+
+## `2022 - Present`
+
+#### [WORK] Bug Bounty Hunter - (Freelance)
 
 - Actively doing bug hunting at [Bugcrowd](https://bugcrowd.com) & [HackerOne](https://www.hackerone.com)
-- Found a Bug with Medium Severity at [Sociabuzz](https://www.sociabuzz.com) [[Certificate]](/static/images/cert/sociabuzz.jpg) [[Details]](https://awpx.github.io/blog/sociabuzz-bug)
 
-#### [PROJECT] Web Development
+## `2021 - Present`
 
-- Build Social Media Web App using MERN Stack (with limited features, unfinished.)- [[Details]](https://awpx.github.io/blog/socmed-mern-project)
-- Build URL Shortener Web App using MERN Stack - [[Details]](https://awpx.github.io/blog/url-shortener-project)
+#### [WORK] IT Developer - (Freelance)
+
+- Develop systems or applications according to wishes and agreements with clients
 
 ## `Oct 2021 - Feb 2022`
 
@@ -58,17 +84,13 @@ Actively doing Coding, Bug Hunting, and Research. Also ranked top 1% at [TryHack
   - Identifying and fixing bug or vulnerability that reported or found in the app.
   - Write clean, stable, and well-documented code
 - **Accomplishment:**
-  - Good knowledge and Experience of Agile Development Method, Backend, Frontend, & Mobile App Development.
+  - Valuable knowledge and Experience of Agile Development Method, Backend, Frontend, & Mobile App Development.
   - Successfully completed an "Approval App" project for a large company in under three months.
 
 #### [PROJECT] Tap Appoval (Mobile Approval App) - [[Details]](https://awpx.github.io/blog/approval-app-project)
 
 - **Project Description:** "TAP Approval" is a mobile-based application that is used by PT TAP to manage the approval or permits of a document, proposal, or others with many levels of hierarchical positions and departments.
 - **My Position:** Mobile Developer (React Native)
-
-#### [PROJECT] Web Development
-
-- Build Social E-Commerce App using MERN Stack - [[Details]](https://awpx.github.io/blog/ecommerce-mern-project)
 
 ## `Apr 2020 - Oct 2020`
 
@@ -88,3 +110,31 @@ Actively doing Coding, Bug Hunting, and Research. Also ranked top 1% at [TryHack
 - Join Embedded System Research Group in the first semester
 
 ---
+
+## My Personal Project
+
+## `2023`
+
+#### [PROJECT] Web Development
+
+- Build Finance Graphic Information App - [[Details]](https://awpx.github.io/blog/finance-graph-info)
+- Build Admin Dashboard App - [[Details]](https://awpx.github.io/blog/admin-dashboard-react)
+
+## `2022`
+
+#### [PROJECT] Bug Bounty
+
+- Found a Bug with Medium Severity at [Sociabuzz](https://www.sociabuzz.com) [[Certificate]](/static/images/cert/sociabuzz.jpg) [[Details]](https://awpx.github.io/blog/sociabuzz-bug)
+
+## `2022`
+
+#### [PROJECT] Web Development
+
+- Build Social Media Web App using MERN Stack - [[Details]](https://awpx.github.io/blog/socmed-mern-project)
+- Build URL Shortener Web App using MERN Stack - [[Details]](https://awpx.github.io/blog/url-shortener-project)
+
+## `2021`
+
+#### [PROJECT] Web Development
+
+- Build Social E-Commerce App using MERN Stack - [[Details]](https://awpx.github.io/blog/ecommerce-mern-project)

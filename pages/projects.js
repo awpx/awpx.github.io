@@ -19,12 +19,13 @@ export default function Projects() {
             My personal projects and some stuff that I built at work.
           </p>
         </div>
+
         <div className="container py-12">
           <h3 className="mb-4 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100">
-            Security
+            Development
           </h3>
           <div className="-m-4 flex flex-wrap">
-            {secProjects.map((d) => (
+            {devProjects.map((d) => (
               <Card
                 key={d.title}
                 title={d.title}
@@ -35,12 +36,13 @@ export default function Projects() {
             ))}
           </div>
         </div>
+
         <div className="container py-12">
           <h3 className="mb-4 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100">
-            Development
+            Security
           </h3>
           <div className="-m-4 flex flex-wrap">
-            {devProjects.map((d) => (
+            {secProjects.map((d) => (
               <Card
                 key={d.title}
                 title={d.title}
