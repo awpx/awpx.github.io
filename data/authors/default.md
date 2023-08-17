@@ -67,6 +67,12 @@ Actively doing Development, Bug Hunting, and Research. Feel free to reach out to
 
 - Develop systems or applications according to wishes and agreements with clients
 
+## `Dec 2020 - Present`
+
+#### [WORK] IT Staff (Software Developer) at CV. Mulia Medika Indonesia
+
+- Develop and maintenance IT Project for the company.
+
 ## `Oct 2021 - Feb 2022`
 
 #### [COURSE/TRAINING] Learn Cyber Security at [TryHackMe](https://tryhackme.com)
