@@ -7,9 +7,29 @@
       <language>en-us</language>
       <managingEditor>awpxwork@gmail.com (awpx)</managingEditor>
       <webMaster>awpxwork@gmail.com (awpx)</webMaster>
-      <lastBuildDate>Mon, 21 Nov 2022 21:44:14 GMT</lastBuildDate>
+      <lastBuildDate>Mon, 24 Jul 2023 13:32:12 GMT</lastBuildDate>
       <atom:link href="https://awpx.github.io/tags/portfolio/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://awpx.github.io/blog/finance-graph-info</guid>
+    <title>[Project/Dev] I Build Finance Graphic Information App</title>
+    <link>https://awpx.github.io/blog/finance-graph-info</link>
+    <description>Information notes that documenting about my project &quot;Finance Graph Information&quot;</description>
+    <pubDate>Mon, 24 Jul 2023 13:32:12 GMT</pubDate>
+    <author>awpxwork@gmail.com (awpx)</author>
+    <category>project</category><category>portfolio</category>
+  </item>
+
+  <item>
+    <guid>https://awpx.github.io/blog/admin-dashboard-react</guid>
+    <title>[Project/Dev] [Project/Dev] I Build Admin Dashboard App</title>
+    <link>https://awpx.github.io/blog/admin-dashboard-react</link>
+    <description>Information notes that documenting about my project &quot;Admin Dashboard Apps&quot;</description>
+    <pubDate>Wed, 15 Mar 2023 22:24:14 GMT</pubDate>
+    <author>awpxwork@gmail.com (awpx)</author>
+    <category>project</category><category>portfolio</category>
+  </item>
+
   <item>
     <guid>https://awpx.github.io/blog/socmed-mern-project</guid>
     <title>[Project/Dev] I Build Socmed-like Apps with MERN Stack</title>
